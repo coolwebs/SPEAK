@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>SPEAK App</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="../jquery-mobile-latest/jquery.mobile-1.3.2.min.css" />
+<link rel="stylesheet" href="../jquery-mobile-latest/jquery.mobile.structure-1.3.2.css" />
+<link rel="stylesheet" href="../jquery-mobile-latest/speak.min.css" />
+<script type="text/javascript" src="../js/jquery-1.9.1.min.js"></script>
+<script type="text/javascript" src="../jquery-mobile-latest/jquery.mobile-1.3.2.min.js"></script>
+<link rel="stylesheet" href="../css/index.css">
+    </head>
+    <body>
+      <div id="links" data-role="page" data-title="SPEAK Links">
+      <header data-role="header" data-theme="e" data-position="fixed">
+          <a href="#" data-rel="back" data-direction="reverse" data-theme="h" data-icon="home">Back</a> 
+          <h1>3.5 years - 4.5 years</h1>
+      </header>
+      <div data-role="content" id="content">
+        <h1>Name that Sound</h1>
+         <div class="centerize">
+        <h3>Audio Sample 2 Controls</h3>
+        <audio src="pig.mp3" id="audio-player1"></audio>
+        <form>
+        <fieldset data-role="controlgroup" data-type="horizontal">
+            <input type="radio" name="cow-sound" onclick="playback();" class="audioPlay1" id="radio-choice-h-1a" data-theme="h" value="">
+            <label for="radio-choice-h-1a"><img src="../icons/play-btn@2x.png" width="16" height="16" /></label>
+            <input type="radio" class="audioPause1" name="cow-sound" onclick="pauseAudio();" id="radio-choice-h-1b" data-theme="h" value="">
+            <label for="radio-choice-h-1b"><img src="../icons/pause-btn@2x.png" width="14" height="16" /></label>
+            <input type="radio" class="audioStop1" name="cow-sound" onclick="stopAudio();" id="radio-choice-h-1c" data-theme="h" value="">
+            <label for="radio-choice-h-1c"><img src="../icons/stop-btn@2x.png" width="16" height="16" /></label>
+        </fieldset>
+        </form>
+      </div>
+        <br />
+    <script type="text/javascript" charset="utf-8" src="../js/animate-collapse.js"></script>
+    <div data-role="collapsible-set">
+      <div data-role="collapsible" data-theme="e" data-content-theme="h">
+        <h3>What sound was that?</h3>
+        <p>The sound was from a Pig.</p>
+      </div>
+    </div>
+      </div>
+
+<script type="text/javascript" charset="utf-8">
+    function playback(){
+      $("#audio-player1")[0].play();
+    }
+    function stopAudio(){
+      $("#audio-player1")[0].pause();
+      $("#audio-player1")[0].currentTime = 0;
+    }
+    function pauseAudio(){
+      $("#audio-player1")[0].pause();
+    }
+</script>
+  <p>&nbsp;</p>
+  <footer data-role="footer" data-theme="c" class="noBorder2"  data-position="fixed">
+      <img src="../img/DETE-footer.png" width="320" class="footer" />
+  </footer>
+      </div>
+
+</div>
+    </body>
+</html>

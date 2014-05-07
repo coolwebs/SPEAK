@@ -1,0 +1,276 @@
+/*
+ * Licensed to the Apache Software Foundation (ASF) under one
+ * or more contributor license agreements.  See the NOTICE file
+ * distributed with this work for additional information
+ * regarding copyright ownership.  The ASF licenses this file
+ * to you under the Apache License, Version 2.0 (the
+ * "License"); you may not use this file except in compliance
+ * with the License.  You may obtain a copy of the License at
+ *
+ * http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing,
+ * software distributed under the License is distributed on an
+ * "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+ * KIND, either express or implied.  See the License for the
+ * specific language governing permissions and limitations
+ * under the License.
+ */
+* {
+    -webkit-tap-highlight-color: rgba(0,0,0,0); /* make transparent link selection, adjust last value opacity 0 to 1.0 */
+}
+
+body {
+    -webkit-touch-callout: none;                /* prevent callout to copy image, etc when tap to hold */
+    -webkit-text-size-adjust: none;             /* prevent webkit from resizing text to fit */
+    -webkit-user-select: none;                  /* prevent copy paste, to allow, change 'none' to 'text' */
+    background-color:#E4E4E4;
+    background-image:linear-gradient(top, #A7A7A7 0%, #E4E4E4 51%);
+    background-image:-webkit-linear-gradient(top, #A7A7A7 0%, #E4E4E4 51%);
+    background-image:-ms-linear-gradient(top, #A7A7A7 0%, #E4E4E4 51%);
+    background-image:-webkit-gradient(
+        linear,
+        left top,
+        left bottom,
+        color-stop(0, #A7A7A7),
+        color-stop(0.51, #E4E4E4)
+    );
+    background-attachment:fixed;
+    font-family:'HelveticaNeue-Light', 'HelveticaNeue', Helvetica, Arial, sans-serif;
+    font-size:12px;
+    height:100%;
+    margin:0px;
+    padding:0px;
+    text-transform:uppercase;
+    width:100%;
+}
+
+/* Portrait layout (default) */
+.app {
+    background:url(../img/logo.png) no-repeat center top; /* 170px x 200px */
+    position:absolute;             /* position in the center of the screen */
+    left:50%;
+    top:50%;
+    height:50px;                   /* text area height */
+    width:225px;                   /* text area width */
+    text-align:center;
+    padding:180px 0px 0px 0px;     /* image height is 200px (bottom 20px are overlapped with text) */
+    margin:-115px 0px 0px -112px;  /* offset vertical: half of image height and text area height */
+                                   /* offset horizontal: half of text area width */
+}
+
+/* Landscape layout (with min-width) */
+@media screen and (min-aspect-ratio: 1/1) and (min-width:400px) {
+    .app {
+        background-position:left center;
+        padding:75px 0px 75px 170px;  /* padding-top + padding-bottom + text area = image height */
+        margin:-90px 0px 0px -198px;  /* offset vertical: half of image height */
+                                      /* offset horizontal: half of image width and text area width */
+    }
+}
+
+h1 {
+    font-size:24px;
+    font-weight:normal;
+    margin:0px;
+    overflow:visible;
+    padding:0px;
+    text-align:center;
+}
+
+.event {
+    border-radius:4px;
+    -webkit-border-radius:4px;
+    color:#FFFFFF;
+    font-size:12px;
+    margin:0px 30px;
+    padding:2px 0px;
+}
+
+.event.listening {
+    background-color:#333333;
+    display:block;
+}
+
+.event.received {
+    background-color:#4B946A;
+    display:none;
+}
+
+@keyframes fade {
+    from { opacity: 1.0; }
+    50% { opacity: 0.4; }
+    to { opacity: 1.0; }
+}
+ 
+@-webkit-keyframes fade {
+    from { opacity: 1.0; }
+    50% { opacity: 0.4; }
+    to { opacity: 1.0; }
+}
+ 
+.blink {
+    animation:fade 3000ms infinite;
+    -webkit-animation:fade 3000ms infinite;
+}
+
+p {font-size: 14px;}
+
+/*Customised CSS for the TIPS PAGE*/
+div#tips {}
+div#tips > ol li {font-size: 14px; margin-left: -15px;
+list-style-image: url(../icons/star-icon.png);
+list-style-position: outside;}
+div#tips hr {margin-left: -15px!important;}
+div#tips > ol li > .title {color: #067d97; font-size: 16px;}
+
+.ui-header .ui-title {
+    margin-right: 10%;
+    margin-left: 10%;
+}
+
+@media screen{
+    @font-face
+    {
+        font-family: 'Coming Soon';
+        font-style: normal;
+        font-weight: normal;
+        src: local('Coming Soon'), url('../fonts/ComingSoon.ttf');       
+    }
+    @font-face
+    {
+        font-family: 'ArchitectsDaughter';
+        font-style: normal;
+        font-weight: normal;
+        src: local('ArchitectsDaughter'), url('../fonts/ArchitectsDaughter.ttf');       
+    }
+}
+
+    .ui-icon-baby {background-image: url("../icons/white/76-baby.png");}
+    .ui-icon-toddler {background-image: url("../icons/white/97-puzzle-piece.png");}
+    .ui-icon-youngChild {background-image: url("../icons/white/98-palette.png");}
+    .ui-icon-child {background-image: url("../icons/white/67-tshirt.png");}
+    .ui-icon-tween {background-image: url("../icons/white/140-gradhat.png");}
+    .ui-icon-link {background-image: url("../icons/black/earth-globe.png");}
+    .ui-icon-chain {background-image: url("../icons/black/chain.png");}
+    .ui-icon-action {background-image: url("../icons/black/212-action.png");}
+    .ui-icon-audio {background-image: url("../icons/black/264-sound-on.png");}
+    .ui-icon-camera {background-image: url("../icons/white/86-camera.png");}
+    .ui-icon-gallery {background-image: url("../icons/white/121-landscape.png");}
+
+@media only screen and (-webkit-min-device-pixel-ratio: 2) {
+	.ui-icon-baby {
+		background-image: url("../icons/white/76-baby@2x.png");
+		background-size: 18px 18px;
+	}
+	.ui-icon-toddler {
+		background-image: url("../icons/white/97-puzzle-piece@2x.png");
+		background-size: 18px 18px;
+	}
+	.ui-icon-youngChild {
+		background-image: url("../icons/white/98-palette@2x.png");
+		background-size: 18px 18px;
+	}
+	.ui-icon-child {
+		background-image: url("../icons/white/67-tshirt@2x.png");
+		background-size: 18px 18px;
+	}
+
+	.ui-icon-tween {
+		background-image: url("../icons/white/140-gradhat@2x.png");
+		background-size: 18px 18px;
+	}
+	.ui-icon-link {
+		background-image: url("../icons/black/earth-globe@2x.png");
+		background-size: 18px 18px;
+	}
+	.ui-icon-action {
+		background-image: url("../icons/black/212-action@2x.png");
+		background-size: 18px 18px;
+	}
+	.ui-icon-audio {
+		background-image: url("../icons/black/264-sound-on@2x.png");
+		background-size: 18px 18px;
+	}
+	.ui-icon-camera {
+		background-image: url("../icons/white/86-camera@2x.png");
+		background-size: 18px 18px;
+	}
+	.ui-icon-gallery {
+		background-image: url("../icons/white/121-landscape@2x.png");
+		background-size: 18px 18px;
+	}
+}
+
+/*@media only screen and (min-device-width : 320px) and (max-device-width : 480px) {*/
+	img.insert { max-width: 100%; max-height:auto; border: 2px solid #ccc; }
+    img.footer { max-width: 100%; max-height:auto; }
+/*}*/
+
+.content {padding-bottom: 0; border: none!important; background: transparent;}
+div.noborder {border: none!important;}
+
+@media screen and (orientation: portrait)
+{
+    .homepage,.dialog-page {
+        background-image: url("../img/speak-home-bg.jpg");
+        background-size: 320px 568px;
+        background-repeat: no-repeat;
+    }
+}
+@media screen and (orientation: landscape)
+{
+    .homepage,.dialog-page {
+        background-image: url("../img/speak-home-landscape.jpg");
+        background-size: 568px 320px;
+        background-repeat: no-repeat;
+    }
+}
+
+@media screen and (orientation: portrait)
+{
+img.footer-portrait { max-width: 100%; max-height:auto; display: inline-block; }
+img.footer-landscape { display: none; }
+}
+
+@media screen and (orientation: landscape)
+{
+img.footer-landscape { max-width: 100%; max-height:auto; display: inline-block;}
+img.footer-portrait { display: none; }
+}
+
+body {text-transform: none!important;}
+div.content > h1 {font-family: 'ArchitectsDaughter';}
+h2 {font-size: 1.3em;}
+form.ui-listview-filter.ui-bar-h.ui-listview-filter { background:transparent!important; border:none!important;}
+ul.small-links li > div.ui-btn-inner.ui-li > div.ui-btn-text > a {font-size: 0.8em;}
+footer.noBorder2 {border: none;}
+footer.noBorder.ui-footer.ui-bar-c.ui-footer-fixed.slideup,.noBorder2.ui-footer.ui-bar-c {
+background: transparent; border:none;
+}
+ul li:last-of-type.cameraButtons > a.ui-icon-nodisc.ui-btn.ui-btn-up-e.ui-btn-inline.ui-btn-icon-top {border-left: 1px solid #4bba5d; }
+li .ui-btn-active { color: #666!important; text-shadow: none!important; background: none !important; background-color: #ccc !important; border: none; }
+
+.ui-btn-active .ui-icon-baby {background-image: url("../icons/black/76-baby.png");}
+.ui-btn-active .ui-icon-toddler {background-image: url("../icons/black/97-puzzle-piece.png");}
+.ui-btn-active .ui-icon-youngChild {background-image: url("../icons/black/98-palette.png"); }
+.ui-btn-active .ui-icon-child {background-image: url("../icons/black/67-tshirt.png");}
+.ui-btn-active .ui-icon-tween {background-image: url("../icons/black/140-gradhat.png");}
+.ui-btn-active .ui-icon-gallery {background-image: url("../icons/black/121-landscape.png");}
+.ui-btn-active .ui-icon-camera {background-image: url("../icons/black/86-camera.png");}
+
+@media only screen and (-webkit-min-device-pixel-ratio: 2) {
+   .ui-btn-active .ui-icon-baby {background-image: url("../icons/black/76-baby@2x.png"); background-size: 18px 18px;}
+    .ui-btn-active .ui-icon-toddler {background-image: url("../icons/black/97-puzzle-piece@2x.png"); background-size: 18px 18px;}
+    .ui-btn-active .ui-icon-youngChild {background-image: url("../icons/black/98-palette@2x.png"); background-size: 18px 18px;}
+    .ui-btn-active .ui-icon-child {background-image: url("../icons/black/67-tshirt@2x.png"); background-size: 18px 18px;}
+    .ui-btn-active .ui-icon-tween {background-image: url("../icons/black/140-gradhat@2x.png"); background-size: 18px 18px;}
+    .ui-btn-active .ui-icon-gallery {background-image: url("../icons/black/121-landscape@2x.png"); background-size: 18px 18px;}
+    .ui-btn-active .ui-icon-camera {background-image: url("../icons/black/86-camera@2x.png"); background-size: 18px 18px;}
+}
+
+.centerize {text-align:center; width: 96%; background: #FFFFFF; margin-top: 20px; border: 3px solid #666; padding: 10px 5px 20px 5px; border-radius: 10px;
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#f2f5f6), color-stop(37%,#e3eaed), color-stop(100%,#c8d7dc)); /* Chrome,Safari4+ */
+background: -webkit-linear-gradient(top,  #f2f5f6 0%,#e3eaed 37%,#c8d7dc 100%); /* Chrome10+,Safari5.1+ */
+background: linear-gradient(to bottom,  #f2f5f6 0%,#e3eaed 37%,#c8d7dc 100%); /* W3C */
+}

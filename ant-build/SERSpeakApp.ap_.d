@@ -1,0 +1,25 @@
+/Users/Coolwebs/desktop/phonegap-projects/speakApp/platforms/android/ant-build/SERSpeakApp.ap_ \
+ : /Users/Coolwebs/desktop/phonegap-projects/speakApp/platforms/android/res/drawable/icon.png \
+/Users/Coolwebs/desktop/phonegap-projects/speakApp/platforms/android/res/drawable-hdpi/icon.png \
+/Users/Coolwebs/desktop/phonegap-projects/speakApp/platforms/android/res/drawable-ldpi/icon.png \
+/Users/Coolwebs/desktop/phonegap-projects/speakApp/platforms/android/res/drawable-mdpi/icon.png \
+/Users/Coolwebs/desktop/phonegap-projects/speakApp/platforms/android/res/drawable-xhdpi/icon.png \
+/Users/Coolwebs/desktop/phonegap-projects/speakApp/platforms/android/res/values/strings.xml \
+/Users/Coolwebs/desktop/phonegap-projects/speakApp/platforms/android/res/xml/config.xml \
+/Users/Coolwebs/desktop/phonegap-projects/speakApp/platforms/android/ant-build/res/drawable/icon.png \
+/Users/Coolwebs/desktop/phonegap-projects/speakApp/platforms/android/ant-build/res/drawable-hdpi/icon.png \
+/Users/Coolwebs/desktop/phonegap-projects/speakApp/platforms/android/ant-build/res/drawable-ldpi/icon.png \
+/Users/Coolwebs/desktop/phonegap-projects/speakApp/platforms/android/ant-build/res/drawable-mdpi/icon.png \
+/Users/Coolwebs/desktop/phonegap-projects/speakApp/platforms/android/ant-build/res/drawable-xhdpi/icon.png \
+/Users/Coolwebs/desktop/phonegap-projects/speakApp/platforms/android/assets/_where-is-www.txt \
+/Users/Coolwebs/desktop/phonegap-projects/speakApp/platforms/android/assets/www \
+/Users/Coolwebs/desktop/phonegap-projects/speakApp/platforms/android/assets/www/cordova.js \
+/Users/Coolwebs/desktop/phonegap-projects/speakApp/platforms/android/assets/www/cordova_plugins.js \
+/Users/Coolwebs/desktop/phonegap-projects/speakApp/platforms/android/assets/www/css \
+/Users/Coolwebs/desktop/phonegap-projects/speakApp/platforms/android/assets/www/img \
+/Users/Coolwebs/desktop/phonegap-projects/speakApp/platforms/android/assets/www/index.html \
+/Users/Coolwebs/desktop/phonegap-projects/speakApp/platforms/android/assets/www/js \
+/Users/Coolwebs/desktop/phonegap-projects/speakApp/platforms/android/assets/www/css/index.css \
+/Users/Coolwebs/desktop/phonegap-projects/speakApp/platforms/android/assets/www/img/logo.png \
+/Users/Coolwebs/desktop/phonegap-projects/speakApp/platforms/android/assets/www/js/index.js \
+/Users/Coolwebs/desktop/phonegap-projects/speakApp/platforms/android/ant-build/AndroidManifest.xml \
